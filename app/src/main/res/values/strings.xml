@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TrackSalah</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--NAVIGATION DRAWER HEADER-->
+    <string name="navigation_drawer_app_name">Track Salah</string>
+    <string name="navigation_drawer_dev_email">amangulati075@gmail.com</string>
+    <string name="nav_drawer_menu_item_today_timing">Today\'s Timings</string>
+    <string name="nav_drawer_menu_item_hijri_calendar">Hijri Calendar</string>
+
+
+    <!--APP CORE STRINGS MAIN ACTIVTITY-->
+    <string name="fajr">FAJR</string>
+    <string name="sunrise">SUNRISE</string>
+    <string name="zuhr">ZUHR</string>
+    <string name="asr">ASR</string>
+    <string name="magrib">MAGRIB</string>
+    <string name="isha">ISHA</string>
+
+
+</resources>
