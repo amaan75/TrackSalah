@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.example.amaan.tracksalah.R
+import com.example.amaan.tracksalah.calendar.HijriCalendarActivity
 import com.example.amaan.tracksalah.timings.TodayTimings
 import kotlinx.android.synthetic.main.activity_navigation_drawer.*
 import kotlinx.android.synthetic.main.layout_toolbar.*
@@ -15,6 +16,7 @@ import org.jetbrains.anko.startActivity
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    open var prevSelectionId: Int = R.id.nav_base_activity_today_timings
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_drawer)
@@ -23,6 +25,11 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
+
+        //Remember this is the FrameLayout area within your activity_main.xml
+//        val contentFrameLayout = find<FrameLayout>(R.id.content_frame)
+        //      layoutInflater.inflate(R.layout.activity_today_timings, contentFrameLayout)
+
         nav_view.setNavigationItemSelectedListener(this)
     }
 
@@ -60,11 +67,16 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         val navId = item.itemId
         when (navId) {
             R.id.nav_base_activity_today_timings -> {
-                // call the todays timings activity
-                startActivity<TodayTimings>()
+                // check the previous selection and if not same activity then start the activity
+                if (prevSelectionId != R.id.nav_base_activity_today_timings) {
+                    startActivity<TodayTimings>()
+                }
             }
             R.id.nav_base_activity_hijri_calendar -> {
-
+                // check the previous selection and if not same activity then start the activity
+                if (prevSelectionId != R.id.nav_base_activity_hijri_calendar) {
+                    startActivity<HijriCalendarActivity>()
+                }
             }
             R.id.nav_slideshow -> {
 
@@ -84,9 +96,4 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         return true
     }
 
-    fun clearChecked() {
-        val navMenuSize = nav_view.menu.size()
-        for (menuItem in 0..navMenuSize)
-            nav_view.menu.getItem(menuItem).isChecked = false
-    }
 }
