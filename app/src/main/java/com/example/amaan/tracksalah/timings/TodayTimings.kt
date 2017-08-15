@@ -22,6 +22,9 @@ class TodayTimings : BaseActivity() {
         super.onResume()
         //highlighting the item that is currently selected
         nav_view.menu.findItem(R.id.nav_base_activity_today_timings).isChecked = true
+        //disabling the Option so that the user cant choose it again
+        nav_view.menu.findItem(R.id.nav_base_activity_today_timings).isEnabled = false
+
     }
 }
 

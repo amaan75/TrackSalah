@@ -63,7 +63,7 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 // call the todays timings activity
                 startActivity<TodayTimings>()
             }
-            R.id.nav_gallery -> {
+            R.id.nav_base_activity_hijri_calendar -> {
 
             }
             R.id.nav_slideshow -> {
