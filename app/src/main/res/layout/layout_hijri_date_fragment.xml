@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp">
+    android:orientation="vertical">
 
     <ListView
         android:id="@id/android:list"
@@ -21,20 +19,22 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:id="@+id/errorImage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="Party Party yay"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background" />
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="No Data"
+            android:scaleType="center"
+            android:src="@drawable/list_empty" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_below="@id/errorImage"
             android:layout_margin="20dp"
             android:fontFamily="sans-serif-light"
-            android:text="Tom"
-            android:textColor="@android:color/white"
+            android:text="@string/list_no_data"
             android:textSize="36sp" />
 
     </RelativeLayout>

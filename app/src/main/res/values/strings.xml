@@ -20,6 +20,7 @@
     <string name="asr">ASR</string>
     <string name="magrib">MAGRIB</string>
     <string name="isha">ISHA</string>
+    <string name="list_no_data">An Error Occurred!</string>
 
 
 </resources>
