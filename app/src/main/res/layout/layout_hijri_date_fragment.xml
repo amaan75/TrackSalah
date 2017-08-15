@@ -16,12 +16,13 @@
     <RelativeLayout
         android:id="@id/android:empty"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
         <ImageView
             android:id="@+id/errorImage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:contentDescription="No Data"
@@ -31,9 +32,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/errorImage"
-            android:layout_margin="20dp"
+            android:layout_centerInParent="true"
             android:fontFamily="sans-serif-light"
+            android:paddingTop="180dp"
             android:text="@string/list_no_data"
             android:textSize="36sp" />
 

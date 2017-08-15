@@ -68,15 +68,15 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         when (navId) {
             R.id.nav_base_activity_today_timings -> {
                 // check the previous selection and if not same activity then start the activity
-                if (prevSelectionId != R.id.nav_base_activity_today_timings) {
+                //if (prevSelectionId != R.id.nav_base_activity_today_timings) {
                     startActivity<TodayTimings>()
-                }
+                //}
             }
             R.id.nav_base_activity_hijri_calendar -> {
                 // check the previous selection and if not same activity then start the activity
-                if (prevSelectionId != R.id.nav_base_activity_hijri_calendar) {
+                //        if (prevSelectionId != R.id.nav_base_activity_hijri_calendar) {
                     startActivity<HijriCalendarActivity>()
-                }
+                //      }
             }
             R.id.nav_slideshow -> {
 

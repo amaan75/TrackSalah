@@ -1,27 +1,21 @@
 package com.example.amaan.tracksalah.calendar
 
 import android.os.Bundle
-import android.widget.FrameLayout
 import com.example.amaan.tracksalah.R
 import com.example.amaan.tracksalah.nav.BaseActivity
 import kotlinx.android.synthetic.main.activity_navigation_drawer.*
-import org.jetbrains.anko.find
 
 class HijriCalendarActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        prevSelectionId = R.id.nav_base_activity_hijri_calendar
 
+        //create a reference to the fragment
         val tempFrag = HijriDateFragment()
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-//        create a reference to content frame layout and load the layout file in the frame layout
-        val contentFrameLayout = find<FrameLayout>(R.id.content_frame)
+        // add the list view  fragment to frame layout
         fragmentTransaction.add(R.id.content_frame, tempFrag, tempFrag.TAG).commit()
-
-        //   layoutInflater.inflate(R.layout.activity_hijri_calendar, contentFrameLayout)
-
 
     }
 
@@ -31,6 +25,9 @@ class HijriCalendarActivity : BaseActivity() {
         nav_view.menu.findItem(R.id.nav_base_activity_hijri_calendar).isChecked = true
     }
 
+    /**
+     * overriding back pressed method to handle the back press for fragments
+     */
     override fun onBackPressed() {
         if (supportFragmentManager.backStackEntryCount > 0)
             supportFragmentManager.popBackStack()

@@ -15,7 +15,6 @@ class TodayTimings : BaseActivity() {
         //Remember this is the FrameLayout area within your activity_main.xml
         val contentFrameLayout = find<FrameLayout>(R.id.content_frame)
         layoutInflater.inflate(R.layout.activity_today_timings, contentFrameLayout)
-        prevSelectionId = R.id.nav_base_activity_today_timings
     }
 
     override fun onResume() {

@@ -11,17 +11,22 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".nav.BaseActivity"
+            android:enabled="false"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".timings.TodayTimings">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--Setting the Activity Launch Mode as singleTask to be used as a singleton-->
+        <activity
+            android:name=".timings.TodayTimings"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".calendar.HijriCalendarActivity" />
+        <activity
+            android:name=".calendar.HijriCalendarActivity"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>
