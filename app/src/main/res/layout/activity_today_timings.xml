@@ -37,8 +37,8 @@
         android:layout_height="wrap_content"
         android:text="@string/fajr"
         android:textAppearance="@style/CodeFont"
-        app:layout_constraintTop_toBottomOf="@id/dateTextView"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView"
         tools:text="Fajr" />
 
     <TextView
@@ -57,8 +57,8 @@
         android:layout_height="wrap_content"
         android:text="@string/sunrise"
         android:textAppearance="@style/CodeFont"
-        app:layout_constraintTop_toBottomOf="@id/fajrTextView"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fajrTextView" />
 
     <TextView
         android:id="@+id/sunriseTimeTextView"
@@ -75,17 +75,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/zuhr"
+        android:textAppearance="@style/CodeFont"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sunriseTextView"
-        android:textAppearance="@style/CodeFont" />
+        app:layout_constraintTop_toBottomOf="@id/sunriseTextView" />
 
     <TextView
         android:id="@+id/zuhrTimeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/CodeFont"
         app:layout_constraintBaseline_toBaselineOf="@id/zuhrTextView"
         app:layout_constraintRight_toLeftOf="parent"
-        android:textAppearance="@style/CodeFont"
         tools:text="1:00pm" />
 
 
@@ -94,53 +94,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/asr"
+        android:textAppearance="@style/CodeFont"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/zuhrTextView"
-        android:textAppearance="@style/CodeFont" />
+        app:layout_constraintTop_toBottomOf="@id/zuhrTextView" />
 
     <TextView
         android:id="@+id/asrTimeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/CodeFont"
         app:layout_constraintBaseline_toBaselineOf="@id/asrTextView"
         app:layout_constraintRight_toLeftOf="parent"
-        android:textAppearance="@style/CodeFont"
         tools:text="5:00pm" />
 
     <TextView
         android:id="@+id/magribTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/asrTextView"
         android:text="@string/magrib"
-        android:textAppearance="@style/CodeFont" />
+        android:textAppearance="@style/CodeFont"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/asrTextView" />
 
     <TextView
         android:id="@+id/magribTimeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/CodeFont"
         app:layout_constraintBaseline_toBaselineOf="@id/magribTextView"
         app:layout_constraintRight_toLeftOf="parent"
-        android:textAppearance="@style/CodeFont"
         tools:text="7:00pm" />
 
     <TextView
         android:id="@+id/ishaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/magribTextView"
         android:text="@string/isha"
-        android:textAppearance="@style/CodeFont" />
+        android:textAppearance="@style/CodeFont"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/magribTextView" />
 
     <TextView
         android:id="@+id/ishaTimeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/CodeFont"
         app:layout_constraintBaseline_toBaselineOf="@id/ishaTextView"
         app:layout_constraintRight_toLeftOf="parent"
-        android:textAppearance="@style/CodeFont"
         tools:text="8:00pm" />
 
     <!--Button
